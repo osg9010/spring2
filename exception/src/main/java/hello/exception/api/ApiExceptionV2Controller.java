@@ -13,26 +13,26 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class ApiExceptionV2Controller {
 
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler
-    public ErrorResult exHandler(Exception ex){
-        log.info("[ExceptionHandler] ex",ex);
-        return new ErrorResult("EX","내부 오류");
-    }
-
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ErrorResult illegalExHandler(IllegalArgumentException ex){
-        log.info("[ExceptionHandler] ex",ex);
-        return new ErrorResult("BAD",ex.getMessage());
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<ErrorResult> userExHandler(UserException ex){
-        log.info("[ExceptionHandler] ex",ex);
-        ErrorResult errorResult = new ErrorResult("USER-EX", ex.getMessage());
-        return new ResponseEntity<>(errorResult,HttpStatus.BAD_REQUEST);
-    }
+//    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+//    @ExceptionHandler
+//    public ErrorResult exHandler(Exception ex){
+//        log.info("[ExceptionHandler] ex",ex);
+//        return new ErrorResult("EX","내부 오류");
+//    }
+//
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    @ExceptionHandler(IllegalArgumentException.class)
+//    public ErrorResult illegalExHandler(IllegalArgumentException ex){
+//        log.info("[ExceptionHandler] ex",ex);
+//        return new ErrorResult("BAD",ex.getMessage());
+//    }
+//
+//    @ExceptionHandler
+//    public ResponseEntity<ErrorResult> userExHandler(UserException ex){
+//        log.info("[ExceptionHandler] ex",ex);
+//        ErrorResult errorResult = new ErrorResult("USER-EX", ex.getMessage());
+//        return new ResponseEntity<>(errorResult,HttpStatus.BAD_REQUEST);
+//    }
 
     @GetMapping("/api2/members/{id}")
     public MemberDto getMember(@PathVariable("id") String id){
