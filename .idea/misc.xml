@@ -8,6 +8,8 @@
     <file type="web" url="file://$PROJECT_DIR$/message" />
     <file type="web" url="file://$PROJECT_DIR$/thymeleaf-basic" />
     <file type="web" url="file://$PROJECT_DIR$/typeconverter" />
+    <file type="web" url="file://$PROJECT_DIR$/upload" />
+    <file type="web" url="file://$PROJECT_DIR$/vaildation" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
